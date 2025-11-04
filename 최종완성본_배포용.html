@@ -1,0 +1,1595 @@
+<!-- 🔥 PREMIUM REDESIGN - COMPLETELY NEW VISUAL -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 NEXT PICK : 취업 시뮬레이션 리그 | 국립한밭대학교</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Pretendard:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Pretendard', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: #000000;
+    }
+    
+    /* 🔥 NEW HERO DESIGN - 완전히 새로운 배경 */
+    .hero-gradient {
+        background: linear-gradient(135deg, 
+            #0A1128 0%, 
+            #001F54 25%,
+            #034078 50%,
+            #001F54 75%,
+            #0A1128 100%);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero-gradient::before {
+        content: '';
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left: -50%;
+        background: radial-gradient(circle, 
+            rgba(59, 130, 246, 0.3) 0%, 
+            rgba(6, 182, 212, 0.2) 25%,
+            transparent 50%);
+        animation: rotate 20s linear infinite;
+    }
+    
+    @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    .hero-gradient::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: 
+            repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(59, 130, 246, 0.03) 2px,
+                rgba(59, 130, 246, 0.03) 4px
+            );
+        pointer-events: none;
+    }
+    
+    /* 🎨 글래스 효과 대폭 강화 */
+    .glass {
+        background: rgba(59, 130, 246, 0.15);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 
+            0 8px 32px 0 rgba(31, 38, 135, 0.37),
+            inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
+    }
+    
+    .glass-dark {
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(25px) saturate(180%);
+        -webkit-backdrop-filter: blur(25px) saturate(180%);
+        border: 1px solid rgba(59, 130, 246, 0.3);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* ✨ 그라디언트 텍스트 애니메이션 강화 */
+    .gradient-text {
+        background: linear-gradient(
+            90deg,
+            #00d2ff 0%,
+            #3a7bd5 25%,
+            #00d2ff 50%,
+            #3a47d5 75%,
+            #00d2ff 100%
+        );
+        background-size: 300% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradient-flow 4s ease infinite;
+        font-weight: 900;
+        text-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+    }
+    
+    @keyframes gradient-flow {
+        0%, 100% { background-position: 0% center; }
+        50% { background-position: 100% center; }
+    }
+    
+    /* 🚀 버튼 완전 새 디자인 */
+    .btn-premium {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 
+            0 10px 30px rgba(102, 126, 234, 0.6),
+            0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .btn-premium::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, transparent, rgba(255,255,255,0.3), transparent);
+        transform: translateX(-100%);
+        transition: transform 0.6s;
+    }
+    
+    .btn-premium:hover {
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 
+            0 20px 50px rgba(102, 126, 234, 0.8),
+            0 0 0 2px rgba(255, 255, 255, 0.2) inset;
+    }
+    
+    .btn-premium:hover::before {
+        transform: translateX(100%);
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* 💎 카드 호버 대폭 개선 */
+    .card-hover {
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+    
+    .card-hover:hover {
+        transform: translateY(-12px) scale(1.02);
+        box-shadow: 
+            0 25px 50px rgba(59, 130, 246, 0.3),
+            0 0 30px rgba(59, 130, 246, 0.2);
+        border-color: rgba(59, 130, 246, 0.6);
+    }
+    
+    .timeline-line {
+        background: linear-gradient(180deg, 
+            transparent, 
+            #667eea 20%, 
+            #06B6D4 50%,
+            #764ba2 80%,
+            transparent);
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+    }
+    
+    ::-webkit-scrollbar {
+        width: 14px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #0a0e1a;
+        border-left: 1px solid rgba(59, 130, 246, 0.1);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #667eea, #764ba2);
+        border-radius: 7px;
+        border: 3px solid #0a0e1a;
+        box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #764ba2, #667eea);
+    }
+    
+    /* 🔴 깜빡이는 점 애니메이션 - 부드럽고 미묘하게 */
+    @keyframes pulse-glow {
+        0%, 100% { 
+            opacity: 1;
+            box-shadow: 0 0 8px rgba(34, 211, 238, 0.6);
+        }
+        50% { 
+            opacity: 0.6;
+            box-shadow: 0 0 20px rgba(34, 211, 238, 0.9);
+        }
+    }
+    
+    .status-indicator {
+        animation: pulse-glow 2s ease-in-out infinite;
+    }
+    
+    /* 💎 접수 상태 박스 - 프로페셔널하고 미니멀하게 */
+    .status-box {
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(30px) saturate(150%);
+        -webkit-backdrop-filter: blur(30px) saturate(150%);
+        border: 1px solid rgba(34, 211, 238, 0.3);
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .tab-content {
+        display: none;
+    }
+    .tab-content.active {
+        display: block;
+        animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes fadeInUp {
+        from { 
+            opacity: 0; 
+            transform: translateY(30px) scale(0.95); 
+        }
+        to { 
+            opacity: 1; 
+            transform: translateY(0) scale(1); 
+        }
+    }
+    .tab-button.active {
+        color: #60a5fa;
+        border-color: #60a5fa;
+        background: rgba(59, 130, 246, 0.15);
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    
+    pre.code-block {
+        background: linear-gradient(135deg, #1a1f3a 0%, #0f1729 100%);
+        color: #e2e8f0;
+        padding: 1.5rem;
+        border-radius: 1.2rem;
+        overflow-x: auto;
+        font-family: 'Fira Code', 'Consolas', monospace;
+        font-size: 1.025rem;
+        line-height: 1.7;
+        margin: 1rem 0;
+        position: relative;
+        border: 2px solid rgba(59, 130, 246, 0.4);
+        box-shadow: 
+            0 8px 24px rgba(0, 0, 0, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    
+    .copy-btn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(59, 130, 246, 0.4);
+        color: #bfdbfe;
+        border: 1px solid rgba(59, 130, 246, 0.6);
+        border-radius: 0.6rem;
+        padding: 8px 14px;
+        font-size: 0.975rem;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        font-weight: 600;
+        backdrop-filter: blur(10px);
+    }
+    .copy-btn:hover {
+        background: rgba(59, 130, 246, 0.7);
+        color: white;
+        transform: scale(1.1) translateY(-2px);
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
+    }
+    .copy-btn.copied {
+        background: linear-gradient(135deg, #10b981, #059669);
+        color: white;
+        border-color: #10b981;
+    }
+
+    .faq-item summary {
+        list-style: none;
+        cursor: pointer;
+        position: relative;
+        padding-right: 2.5rem;
+        transition: all 0.3s;
+    }
+    .faq-item summary::-webkit-details-marker {
+        display: none;
+    }
+    .faq-item summary::after {
+        content: '067';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #60a5fa;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        font-size: 1.1em;
+    }
+    .faq-item[open] summary::after {
+        content: '068';
+        color: #06B6D4;
+        transform: translateY(-50%) rotate(180deg) scale(1.2);
+    }
+    .faq-item summary:hover {
+        color: #60a5fa;
+    }
+    
+    /* ⭐ 추가 애니메이션 */
+    .floating {
+        animation: floating 6s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        25% { transform: translateY(-10px) rotate(1deg); }
+        50% { transform: translateY(-20px) rotate(0deg); }
+        75% { transform: translateY(-10px) rotate(-1deg); }
+    }
+    
+    /* 섹션별 배경 개선 */
+    section {
+        position: relative;
+    }
+    
+    section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.03), transparent 70%);
+        pointer-events: none;
+    }
+
+    /* 📐 레이아웃 개선 */
+    .container {
+        max-width: 1400px !important;
+    }
+    
+    /* 📝 본문 가독성 개선 */
+    p, li, td, span {
+        line-height: 1.8 !important;
+        letter-spacing: -0.01em;
+    }
+    
+    /* 🎯 메인 타이틀 강조 */
+    h1, h2, h3 {
+        letter-spacing: -0.02em;
+    }
+    
+    /* 💎 카드 내부 패딩 증가 */
+    .card-hover {
+        padding: 2.5rem !important;
+    }
+    
+    /* 📊 표 가독성 개선 */
+    table td, table th {
+        padding: 1.25rem 1.5rem !important;
+        line-height: 1.8 !important;
+    }
+
+
+    
+    /* 📊 평가기준 & 가이드 섹션 디자인 고도화 */
+    .criteria-tabs .tab-content,
+    .guide-tabs .tab-content {
+        padding: 3rem !important;
+        line-height: 2 !important;
+        background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(248,250,252,0.95) 100%);
+        border-radius: 1.5rem;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    }
+    
+    .criteria-tabs h3,
+    .guide-tabs h3 {
+        font-size: 2.25rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 2rem !important;
+        color: #1e293b !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.02em;
+    }
+    
+    .criteria-tabs h5,
+    .guide-tabs h5 {
+        font-size: 1.5rem !important;
+        line-height: 1.5 !important;
+        margin-top: 2.5rem !important;
+        margin-bottom: 1.5rem !important;
+        color: #3b82f6 !important;
+        font-weight: 700 !important;
+    }
+    
+    .criteria-tabs p,
+    .guide-tabs p {
+        font-size: 1.125rem !important;
+        line-height: 2 !important;
+        margin-bottom: 1.5rem !important;
+        color: #475569 !important;
+    }
+    
+    .criteria-tabs ul,
+    .guide-tabs ul,
+    .criteria-tabs ol,
+    .guide-tabs ol {
+        font-size: 1.0625rem !important;
+        line-height: 2.2 !important;
+        margin-left: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .criteria-tabs li,
+    .guide-tabs li {
+        margin-bottom: 1rem !important;
+        color: #475569 !important;
+        padding-left: 0.5rem !important;
+    }
+    
+    /* 🎯 자소서 가이드 details 개선 */
+    .faq-item {
+        margin-bottom: 1.25rem !important;
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+        border: 2px solid #e2e8f0 !important;
+        border-radius: 1rem !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        overflow: hidden;
+    }
+    
+    .faq-item:hover {
+        border-color: #3b82f6 !important;
+        box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15) !important;
+        transform: translateY(-2px);
+    }
+    
+    .faq-item summary {
+        padding: 1.5rem 3rem 1.5rem 1.75rem !important;
+        font-size: 1.25rem !important;
+        font-weight: 700 !important;
+        color: #1e293b !important;
+        cursor: pointer;
+        background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.03) 100%);
+        transition: all 0.3s;
+    }
+    
+    .faq-item summary:hover {
+        background: linear-gradient(90deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.08) 100%);
+        padding-left: 2rem !important;
+    }
+    
+    .faq-item summary::before {
+        content: '▶';
+        display: inline-block;
+        margin-right: 0.75rem;
+        color: #3b82f6;
+        font-size: 0.875rem;
+        transition: transform 0.3s;
+    }
+    
+    .faq-item[open] summary::before {
+        transform: rotate(90deg);
+    }
+    
+    .faq-item summary::after {
+        right: 1.5rem !important;
+        font-size: 1.25rem !important;
+        color: #3b82f6 !important;
+    }
+    
+    .faq-item[open] {
+        border-color: #3b82f6 !important;
+        box-shadow: 0 12px 32px rgba(59, 130, 246, 0.2) !important;
+    }
+    
+    .faq-item > div {
+        padding: 1.75rem !important;
+        font-size: 1.0625rem !important;
+        line-height: 2 !important;
+        color: #475569 !important;
+        background: rgba(248, 250, 252, 0.5);
+    }
+    
+    /* 📋 표 디자인 개선 */
+    .criteria-tabs table,
+    .guide-tabs table {
+        margin: 2rem 0 !important;
+        border-radius: 1rem !important;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08) !important;
+    }
+    
+    .criteria-tabs table td,
+    .guide-tabs table td {
+        font-size: 1.0625rem !important;
+        line-height: 1.8 !important;
+        padding: 1.5rem !important;
+    }
+    
+    .criteria-tabs table th,
+    .guide-tabs table th {
+        font-size: 1.125rem !important;
+        padding: 1.5rem !important;
+        font-weight: 700 !important;
+    }
+    
+    /* 🎨 참여가이드 박스 개선 */
+    .guide-tabs .bg-slate-50 {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+        border: 2px solid #e2e8f0 !important;
+        border-radius: 1.5rem !important;
+        padding: 2.5rem !important;
+        transition: all 0.3s;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.05) !important;
+    }
+    
+    .guide-tabs .bg-slate-50:hover {
+        border-color: #3b82f6 !important;
+        box-shadow: 0 12px 32px rgba(59, 130, 246, 0.12) !important;
+        transform: translateY(-4px);
+    }
+    
+    .guide-tabs h4 {
+        font-size: 1.5rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1.25rem !important;
+        font-weight: 700 !important;
+        color: #1e293b !important;
+    }
+    
+    .guide-tabs h5 {
+        font-size: 1.25rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1rem !important;
+        font-weight: 600 !important;
+    }
+    
+    /* 💎 코드 블록 개선 */
+    .guide-tabs pre.code-block {
+        margin: 2rem 0 !important;
+        padding: 2rem !important;
+        line-height: 1.9 !important;
+        font-size: 1rem !important;
+    }
+
+</style>
+</head>
+<body class="bg-slate-900 text-gray-300">
+    <header class="fixed top-0 left-0 w-full z-50 glass-dark border-b border-white/10">
+        <div class="container mx-auto px-8 max-w-7xl">
+            <div class="flex justify-between items-center h-20">
+                <a href="#hero" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                        <i class="fas fa-star text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold text-white">NEXT PICK 2025</span>
+                </a>
+            <nav class="hidden lg:flex items-center gap-10">
+                <a href="#overview" class="text-gray-300 hover:text-white transition-colors">대회 개요</a>
+                <a href="#schedule" class="text-gray-300 hover:text-white transition-colors">주요 일정</a>
+                <a href="#criteria" class="text-gray-300 hover:text-white transition-colors">평가 기준</a>
+                <a href="#guide" class="text-gray-300 hover:text-white transition-colors">참여 가이드</a>
+                <a href="#submit" class="text-gray-300 hover:text-white transition-colors">양식 & 출품</a>
+            </nav>
+            
+            <a href="https://forms.gle/bpywPV7KdfzsFuG18" target="_blank" class="btn-premium hidden lg:inline-block bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/30 transition-all">
+                <span class="relative z-10">온라인 출품하기</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<section id="hero" class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-5xl mx-auto text-center">
+            
+            <div data-aos="fade-down" class="inline-flex items-center gap-4 status-box px-8 py-4 rounded-full mb-14">
+                <div class="w-2 h-2 bg-cyan-400 rounded-full status-indicator"></div>
+                <span class="text-xl font-medium text-cyan-300 uppercase tracking-wider" style="letter-spacing: 2px;">접수 진행중</span>
+                <div class="h-4 w-px bg-white/20"></div>
+                <div id="realtime-countdown" class="text-xl font-bold text-white tracking-wide">--일 --:--:--</div>
+            </div>
+            
+            <h1 data-aos="fade-up" class="text-5xl lg:text-7xl font-black text-white mb-8 tracking-tight" style="line-height: 1.3; text-shadow: 0 4px 12px rgba(0,0,0,0.8), 0 0 30px rgba(59,130,246,0.3);">
+                2025년 <span class="gradient-text">NEXT PICK</span>:<br>취업 시뮬레이션 리그
+            </h1>
+            
+            <h2 data-aos="fade-up" data-aos-delay="100" class="text-xl lg:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto" style="line-height: 1.7; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">
+                수많은 경쟁자 속, 차별화된 당신의 빛★<br>
+                이 리그가 끝나면 기업의
+                <strong class="text-cyan-300 font-semibold">NEXT PICK</strong>은 당신입니다.
+            </h2>
+            
+            <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="https://forms.gle/bpywPV7KdfzsFuG18" target="_blank" class="btn-premium group bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-blue-500/30 transition-all">
+                    <span class="relative z-10 flex items-center gap-2">
+                        <i class="fas fa-paper-plane"></i>
+                        지금 바로 출품하기
+                    </span>
+                </a>
+                <a href="#guide" class="glass border border-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+                    <i class="fas fa-book-open"></i>
+                    참여가이드 보기
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div class="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
+        </div>
+    </div>
+</section>
+
+<section id="overview" class="py-40 bg-white text-slate-900">
+    <div class="container mx-auto px-8 max-w-7xl">
+        <div class="text-center mb-20">
+            <h2 data-aos="fade-up" class="text-5xl font-black text-slate-900 mb-4" style="line-height: 1.2;">경진대회 개요</h2>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-600" style="line-height: 1.6;">
+                실전 채용 프로세스를 경험하며 당신의 가치를 증명하세요.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-20">
+            <div data-aos="fade-up" class="card-hover bg-slate-50 rounded-3xl p-8 border border-slate-200">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-6">
+                    <i class="fas fa-users text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-500 mb-3" style="font-size: 22px; line-height: 30px;">모집 대상</h3>
+                <p class="text-xl font-bold text-slate-900" style="line-height: 1.5; font-size: 18px; letter-spacing: -0.3px;">
+                    국립한밭대 재학생,<br>휴학생, 유예생 모두
+                </p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="100" class="card-hover bg-slate-50 rounded-3xl p-8 border border-slate-200">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-6">
+                    <i class="fas fa-calendar-times text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-500 mb-3" style="font-size: 22px; line-height: 30px;">접수 마감</h3>
+                <p class="text-xl font-bold text-slate-900" style="line-height: 1.5; font-size: 17px; letter-spacing: -0.8px;">
+                    2025. 11. 14.(금) 23:59
+                </p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="200" class="card-hover bg-slate-50 rounded-3xl p-8 border border-slate-200">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-6">
+                    <i class="fas fa-calendar-alt text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-500 mb-3" style="font-size: 22px; line-height: 30px;">운영 기간</h3>
+                <p class="text-xl font-bold text-slate-900" style="line-height: 1.5; font-size: 16px; letter-spacing: -1px;">
+                    2025. 10. 20. (월) ~ 12. 8. (월)
+                </p>
+            </div>
+            
+            <div data-aos="fade-up" data-aos-delay="300" class="card-hover bg-slate-50 rounded-3xl p-8 border border-slate-200">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-6">
+                    <i class="fas fa-gifts text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-500 mb-3" style="font-size: 22px; line-height: 30px;">총 상금 규모</h3>
+                <p class="text-xl font-bold text-slate-900" style="line-height: 1.5; font-size: 18px; letter-spacing: -0.3px;">
+                    약 350만원 규모
+                </p>
+            </div>
+        </div>
+
+        <div class="text-center mb-10">
+            <h3 data-aos="fade-up" class="text-3xl font-bold text-slate-900 mb-4" style="font-size: 36px; line-height: 44px;">시상 내역 (총 63명)</h3>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-lg text-slate-600" style="font-size: 18px; line-height: 30px; max-width: 48rem; margin: 0 auto;">
+                📢 대상부터 입선까지는 2차 심사 후 최종선정되며, 참가상은 서류 적격 여부 통과자 중 선착순 지급
+            </p>
+        </div>
+        
+        <div data-aos="fade-up" class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 md:p-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-8">
+                <div data-aos="zoom-in" class="relative">
+                    <div class="relative glass rounded-3xl p-8 border border-blue-500/30 text-center h-full">
+                        <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                            <i class="fas fa-trophy text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">대상</h3>
+                        <div class="text-4xl font-black gradient-text mb-4">500,000원</div>
+                        <p class="text-gray-400">1명</p>
+                    </div>
+                </div>
+                
+                <div data-aos="zoom-in" data-aos-delay="100" class="relative">
+                    <div class="relative glass rounded-3xl p-8 border border-blue-500/30 text-center h-full">
+                        <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                            <i class="fas fa-medal text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">최우수</h3>
+                        <div class="text-4xl font-black text-gray-300 mb-4">각 400,000원</div>
+                        <p class="text-gray-400">2명</p>
+                    </div>
+                </div>
+                
+                <div data-aos="zoom-in" data-aos-delay="200" class="relative">
+                    <div class="relative glass rounded-3xl p-8 border border-blue-500/30 text-center h-full">
+                        <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                            <i class="fas fa-award text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">우수</h3>
+                        <div class="text-4xl font-black text-blue-300 mb-4">각 200,000원</div>
+                        <p class="text-gray-400">3명</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-up" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass rounded-2xl p-6 border border-white/10">
+                    <h4 class="text-xl font-bold text-white mb-2">장려</h4>
+                    <p class="text-3xl font-bold text-cyan-400 mb-1">각 100,000원</p>
+                    <p class="text-gray-400">4명</p>
+                </div>
+                <div class="glass rounded-2xl p-6 border border-white/10">
+                    <h4 class="text-xl font-bold text-white mb-2">입선</h4>
+                    <p class="text-3xl font-bold text-blue-400 mb-1">네이버 페이 5만원권</p>
+                    <p class="text-gray-400">5명 (모바일 쿠폰)</p>
+                </div>
+                <div class="glass rounded-2xl p-6 border border-white/10">
+                    <h4 class="text-xl font-bold text-white mb-2">참가상</h4>
+                    <p class="text-3xl font-bold text-cyan-400 mb-1">네이버 페이 2만원권</p>
+                    <p class="text-gray-400">48명 (모바일 쿠폰)</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="schedule" class="py-40 bg-slate-50">
+    <div class="container mx-auto px-8 max-w-7xl">
+        <div class="text-center mb-20">
+            <h2 data-aos="fade-up" class="text-5xl font-black text-slate-900 mb-4" style="line-height: 1.2;">주요 일정</h2>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-600" style="line-height: 1.6;">
+                단계별 미션을 통해 최종 NEXT PICK에 도전하세요.
+            </p>
+            <p data-aos="fade-up" data-aos-delay="150" class="text-md text-slate-500 mt-4" style="font-size: 18px; line-height: 30px;">
+                📢 하기 일정은 접수 상황에 따라 변경될 수 있습니다.
+            </p>
+        </div>
+        
+        <div class="relative max-w-4xl mx-auto">
+            <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full timeline-line"></div>
+            
+            <div class="space-y-16">
+                <div data-aos="fade-right" class="relative flex items-start md:items-center gap-6 md:gap-10">
+                    <div class="relative z-10 mt-1 md:mt-0 md:order-2">
+                        <div class="w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
+                    </div>
+                    <div class="w-full md:w-1/2 md:text-right md:pr-8 md:order-1 pl-8 md:pl-0">
+                        <div class="inline-block w-full bg-white rounded-2xl p-6 shadow-lg">
+                            <div class="text-sm text-blue-500 font-semibold mb-2">STEP 1</div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2" style="font-size: 24px; line-height: 32px;">서류 접수 마감</h3>
+                            <p class="text-slate-600" style="font-size: 18px; line-height: 30px;">~ 2025. 11. 14.(금) 23:59</p>
+                            <p class="text-slate-500 text-sm mt-1" style="font-size: 18px; line-height: 30px;">온라인 구글 폼으로 신청서 및 출품작 제출</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 md:order-3"></div>
+                </div>
+                
+                <div data-aos="fade-left" class="relative flex items-start md:items-center gap-6 md:gap-10">
+                    <div class="relative z-10 mt-1 md:mt-0 md:order-2">
+                        <div class="w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
+                    </div>
+                    <div class="md:w-1/2 md:order-1"></div>
+                    <div class="w-full md:w-1/2 md:pl-8 md:order-3 pl-8 md:pl-8">
+                        <div class="inline-block w-full bg-white rounded-2xl p-6 shadow-lg">
+                            <div class="text-sm text-blue-500 font-semibold mb-2">STEP 2</div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2" style="font-size: 24px; line-height: 32px;">1차 심사(서류평가)</h3>
+                            <p class="text-slate-600" style="font-size: 18px; line-height: 30px;">2025. 11. 17. (월) ~ 11. 20. (목)</p>
+                            <p class="text-slate-500 text-sm mt-1" style="font-size: 18px; line-height: 30px;">취업지원관 평가 (적격 여부 + 내용 평가)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-right" class="relative flex items-start md:items-center gap-6 md:gap-10">
+                    <div class="relative z-10 mt-1 md:mt-0 md:order-2">
+                        <div class="w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
+                    </div>
+                    <div class="w-full md:w-1/2 md:text-right md:pr-8 md:order-1 pl-8 md:pl-0">
+                        <div class="inline-block w-full bg-white rounded-2xl p-6 shadow-lg">
+                            <div class="text-sm text-blue-500 font-semibold mb-2">STEP 3</div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2" style="font-size: 24px; line-height: 32px;">1차 심사 결과발표</h3>
+                            <p class="text-slate-600" style="font-size: 18px; line-height: 30px;">2025. 11. 21. (금) 15:00</p>
+                            <p class="text-slate-500 text-sm mt-1" style="font-size: 18px; line-height: 30px;">최종 15명 선발 (1.5배수)</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 md:order-3"></div>
+                </div>
+                
+                <div data-aos="fade-left" class="relative flex items-start md:items-center gap-6 md:gap-10">
+                    <div class="relative z-10 mt-1 md:mt-0 md:order-2">
+                        <div class="w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
+                    </div>
+                    <div class="md:w-1/2 md:order-1"></div>
+                    <div class="w-full md:w-1/2 md:pl-8 md:order-3 pl-8 md:pl-8">
+                        <div class="inline-block w-full bg-white rounded-2xl p-6 shadow-lg">
+                            <div class="text-sm text-blue-500 font-semibold mb-2">STEP 4</div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2" style="font-size: 24px; line-height: 32px;">1:1 비대면 면접 컨설팅</h3>
+                            <p class="text-slate-600" style="font-size: 18px; line-height: 30px;">2025. 11. 22. (토) ~ 12. 3. (수)</p>
+                            <p class="text-slate-500 text-sm mt-1" style="font-size: 18px; line-height: 30px;">본선 진출자 15명 대상 (1인 1회 60분, 비대면)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-right" class="relative flex items-start md:items-center gap-6 md:gap-10">
+                    <div class="relative z-10 mt-1 md:mt-0 md:order-2">
+                        <div class="w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
+                    </div>
+                    <div class="w-full md:w-1/2 md:text-right md:pr-8 md:order-1 pl-8 md:pl-0">
+                        <div class="inline-block w-full bg-white rounded-2xl p-6 shadow-lg">
+                            <div class="text-sm text-blue-500 font-semibold mb-2">STEP 5</div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2" style="font-size: 24px; line-height: 32px;">2차 심사(모의면접)</h3>
+                            <p class="text-slate-600" style="font-size: 18px; line-height: 30px;">2025. 12. 5. (금)</p>
+                            <p class="text-slate-500 text-sm mt-1" style="font-size: 18px; line-height: 30px;">사전공개 질문 + 현장 질문 (SO동 416호)</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 md:order-3"></div>
+                </div>
+                
+                <div data-aos="fade-left" class="relative flex items-start md:items-center gap-6 md:gap-10">
+                    <div class="relative z-10 mt-1 md:mt-0 md:order-2">
+                        <div class="w-4 h-4 bg-cyan-500 rounded-full border-4 border-white shadow-lg"></div>
+                    </div>
+                    <div class="md:w-1/2 md:order-1"></div>
+                    <div class="w-full md:w-1/2 md:pl-8 md:order-3 pl-8 md:pl-8">
+                        <div class="inline-block w-full bg-white rounded-2xl p-6 shadow-lg">
+                            <div class="text-sm text-cyan-500 font-semibold mb-2">FINAL</div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2" style="font-size: 24px; line-height: 32px;">최종결과 발표</h3>
+                            <p class="text-slate-600" style="font-size: 18px; line-height: 30px;">2025. 12. 8. (월) 16:00</p>
+                            <p class="text-slate-500 text-sm mt-1" style="font-size: 18px; line-height: 30px;">대학일자리본부 홈페이지·SMS 발송</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="criteria" class="py-40 bg-white text-slate-900">
+    <div class="container mx-auto px-8 max-w-7xl">
+        <div class="text-center mb-20">
+            <h2 data-aos="fade-up" class="text-5xl font-black text-slate-900 mb-4" style="line-height: 1.2;">평가 기준 & 작성 가이드</h2>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-600" style="line-height: 1.6;">
+                합격을 위한 핵심 전략과 평가 기준을 확인하세요.
+            </p>
+        </div>
+
+        <div data-aos="fade-up" class="criteria-tabs bg-slate-50 rounded-3xl shadow-xl p-6 md:p-12">
+            <div class="flex flex-wrap gap-2 mb-8 border-b border-slate-200 pb-4">
+                <button class="tab-button active px-6 py-4 md:px-8 md:py-4 rounded-xl font-bold text-base md:text-lg transition-all border-2 shadow-lg" data-tab="criteria-0">경험정리 가이드</button>
+                <button class="tab-button px-6 py-4 md:px-8 md:py-4 rounded-xl font-semibold text-slate-600 hover:text-slate-900 text-base md:text-lg transition-all border-2 border-slate-200 hover:border-blue-300" data-tab="criteria-1">이력서 가이드</button>
+                <button class="tab-button px-6 py-4 md:px-8 md:py-4 rounded-xl font-semibold text-slate-600 hover:text-slate-900 text-base md:text-lg transition-all border-2 border-slate-200 hover:border-blue-300" data-tab="criteria-2">자소서 가이드</button>
+                <button class="tab-button px-6 py-4 md:px-8 md:py-4 rounded-xl font-semibold text-slate-600 hover:text-slate-900 text-base md:text-lg transition-all border-2 border-slate-200 hover:border-blue-300" data-tab="criteria-3">1차 서류평가</button>
+                <button class="tab-button px-6 py-4 md:px-8 md:py-4 rounded-xl font-semibold text-slate-600 hover:text-slate-900 text-base md:text-lg transition-all border-2 border-slate-200 hover:border-blue-300" data-tab="criteria-4">2차 면접평가</button>
+            </div>
+            
+            <div class="prose prose-lg max-w-none prose-slate prose-h3:text-slate-900 prose-h5:text-blue-600 prose-h6:text-slate-800 prose-ol:text-slate-600 prose-ul:text-slate-600 prose-p:text-slate-600 prose-strong:text-slate-700 prose-code:text-blue-600 prose-code:font-semibold prose-code:before:content-none prose-code:after:content-none prose-a:text-blue-600 hover:prose-a:text-blue-700">
+                <div class="tab-content active" id="criteria-0">
+                    <h3 style="font-size: 36px; line-height: 44px;"><i class="fas fa-drafting-compass"></i> 경험정리 가이드</h3>
+                    <p style="font-size: 18px; line-height: 30px;">🚀 아래 시트를 이용해서 경험 소스를 구체화 할 수 있어요. 😁</p>
+                    <p style="font-size: 18px; line-height: 30px;">이 시트는 여러분의 다양한 경험(수업, 프로젝트, 아르바이트, 동아리 등)을 체계적으로 정리하고, 각 경험에서 얻은 역량과 성과를 명확하게 파악하는 데 도움을 줍니다. STAR+F/I 기법에 맞춰 작성해보세요!</p>
+                    <a href="https://docs.google.com/spreadsheets/d/1sAYpOxMV0e6ZOYXN1f-Ajx0swVCyidvi/edit?usp=sharing&ouid=100853765120340587510&rtpof=true&sd=true" target="_blank" class="no-underline btn-premium inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all">
+                        <span class="relative z-10"><i class="fas fa-external-link-alt"></i> 경험정리 DB 만들기 시트 바로가기</span>
+                    </a>
+                    <p class="text-sm text-slate-500 mt-4" style="font-size: 18px; line-height: 30px;">* 구글 계정 로그인이 필요할 수 있습니다.</p>
+                </div>
+                
+                <div class="tab-content" id="criteria-1">
+                    <h3 style="font-size: 36px; line-height: 44px;"><i class="fas fa-file-alt"></i> 이력서: 6초 안에 사로잡는 법</h3>
+                    <p style="font-size: 18px; line-height: 30px;">평균 검토 시간 6초! 첫인상에서 직무 적합성을 명확히 보여줘야 합니다.</p>
+                    <h5 style="font-size: 24px; line-height: 32px;"><i class="fas fa-times-circle text-red-500"></i> 5가지 치명적 실수 피하기</h5>
+                    <ol style="font-size: 18px; line-height: 30px;">
+                        <li><strong>공란 방치:</strong> 성실성 의심! <code>"해당 없음"</code> 명시.</li>
+                        <li><strong>역순 오류:</strong> 과거보단 현재! <code>최신순</code> 정렬 필수.</li>
+                        <li><strong>무관 정보 상단 배치:</strong> 첫 3초가 중요! <code>직무 핵심 역량</code> 먼저.</li>
+                        <li><strong>단순 나열:</strong> 결과가 없다! <code>"처리 속도 40% 개선"</code> 처럼 정량화.</li>
+                        <li><strong>오타/오류:</strong> 신뢰도 하락! <code>최소 3회</code> 검토.</li>
+                    </ol>
+                    <h5 style="font-size: 24px; line-height: 32px;"><i class="fas fa-star text-yellow-500"></i> 경험 작성: STAR + F/I 기법</h5>
+                    <ul style="font-size: 18px; line-height: 30px;">
+                        <li><strong>Situation (상황):</strong> 프로젝트 배경</li>
+                        <li><strong>Task (과제):</strong> 주어진 역할/목표</li>
+                        <li><strong>Action (행동):</strong> 구체적 실행 (기술/도구 명시)</li>
+                        <li><strong>Result (결과):</strong> 정량적 성과 (숫자 필수!)</li>
+                        <li><strong>Feeling/Insight (배운점):</strong> 깨달음, 통찰</li>
+                    </ul>
+                    <h5 style="font-size: 24px; line-height: 32px;"><i class="fas fa-robot text-purple-500"></i> ATS 통과 전략</h5>
+                    <ol style="font-size: 18px; line-height: 30px;">
+                        <li><strong>키워드 추출:</strong> 채용 공고 분석 → 핵심 키워드 3~5개 선정.</li>
+                        <li><strong>전략적 배치:</strong> 핵심 역량, 프로젝트 경험에 <code>3회 이상</code> 자연스럽게 포함.</li>
+                    </ol>
+                </div>
+                
+                <div class="tab-content" id="criteria-2">
+                    <h3 style="font-size: 36px; line-height: 44px;"><i class="fas fa-pen-fancy"></i> 자소서: 문항별 핵심 공략</h3>
+                    <p style="font-size: 18px; line-height: 30px;">ATS 필터와 인사담당자의 마음을 모두 사로잡는 자소서 전략입니다.</p>
+                    <div class="space-y-4">
+                        <details class="faq-item bg-white border border-slate-200 rounded-lg p-5">
+                            <summary class="text-lg font-bold text-slate-800" style="font-size: 24px; line-height: 32px;">항목 1: 직무 선택 계기 & 준비 노력 (900자)</summary>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <p style="font-size: 18px; line-height: 30px;"><strong><i class="fas fa-bullseye"></i> 평가 의도:</strong> 직무 진정성, 체계적 준비 과정</p>
+                                <p style="font-size: 18px; line-height: 30px;"><strong><i class="fas fa-list-ol"></i> 추천 구조:</strong> 1) 직무 선택 계기(경험 기반) → 2) 역량 학습 과정(수업, 자격증) → 3) 심화 경험(STAR+F/I, 성과 중심)</p>
+                            </div>
+                        </details>
+                        <details class="faq-item bg-white border border-slate-200 rounded-lg p-5">
+                            <summary class="text-lg font-bold text-slate-800" style="font-size: 24px; line-height: 32px;">항목 2: 협업 및 기여 경험 (900자)</summary>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <p style="font-size: 18px; line-height: 30px;"><strong><i class="fas fa-bullseye"></i> 평가 의도:</strong> 조직 적합성, 갈등 해결 능력 ('나'의 역할 중심)</p>
+                                <p style="font-size: 18px; line-height: 30px;"><strong><i class="fas fa-list-ol"></i> 추천 구조:</strong> 1) 협업 상황/목표/역할 → 2) 갈등 상황 & '나'의 해결 노력 (구체적 행동) → 3) 팀 성과(정량적) & 배운 점</p>
+                            </div>
+                        </details>
+                        <details class="faq-item bg-white border border-slate-200 rounded-lg p-5">
+                            <summary class="text-lg font-bold text-slate-800" style="font-size: 24px; line-height: 32px;">항목 3: 목표 달성 경험 (800자)</summary>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <p style="font-size: 18px; line-height: 30px;"><strong><i class="fas fa-bullseye"></i> 평가 의도:</strong> 끈기, 문제 해결 능력 (성공담 < '실패→극복' 스토리)</p>
+                                <p style="font-size: 18px; line-height: 30px;"><strong><i class="fas fa-list-ol"></i> 추천 구조:</strong> 1) 목표 설정 배경 → 2) 장애물 & 실패 원인 분석 → 3) 창의적 해결 방법 → 4) 최종 성과(Before/After) & 교훈</p>
+                            </div>
+                        </details>
+                         <details class="faq-item bg-white border border-slate-200 rounded-lg p-5">
+                            <summary class="text-lg font-bold text-slate-800" style="font-size: 24px; line-height: 32px;">항목 4: 입사 후 성장 목표 & 계획 (600자)</summary>
+                            <div class="mt-4 pt-4 border-t border-slate-200">
+                                <p style="font-size: 18px; line-height: 30px;"><strong><i class="fas fa-bullseye"></i> 평가 의도:</strong> 현실적 성장 계획, 조직 기여 가능성 (추상적 목표 금지)</p>
+                                <p style="font-size: 18px; line-height: 30px;"><strong><i class="fas fa-list-ol"></i> 추천 구조:</strong> 1) 단기(1~2년): Junior 전문가 목표 → 2) 중기(3~5년): Specialist 목표 → 3) 구체적 실행 계획(학습, 자격증 등)</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="criteria-3">
+                    <h3 style="font-size: 36px; line-height: 44px;"><i class="fas fa-tasks"></i> 1차 서류 심사 평가표 (110점 만점)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="not-prose min-w-full divide-y divide-slate-200 border border-slate-200 rounded-lg overflow-hidden">
+                            <thead class="bg-slate-900">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">평가항목</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">내용</th>
+                                    <th scope="col" class="px-6 py-3 text-center text-xs font-bold text-white uppercase tracking-wider">배점</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-slate-200 text-slate-700">
+                                <tr> <td class="px-6 py-4 font-bold text-slate-800">직무 이해도 & 적합성</td> <td class="px-6 py-4">직무 요구 역량 연계성, 구체적 목표</td> <td class="px-6 py-4 text-center font-bold text-blue-600">30</td> </tr>
+                                <tr> <td class="px-6 py-4 font-bold text-slate-800">경험의 구체성</td> <td class="px-6 py-4">STAR+F/I, 정량적 성과(숫자≥3), 역할 명확성</td> <td class="px-6 py-4 text-center font-bold text-blue-600">30</td> </tr>
+                                <tr> <td class="px-6 py-4 font-bold text-slate-800">차별화된 강점</td> <td class="px-6 py-4">독창적 접근, 문제 해결(실패→개선→성과)</td> <td class="px-6 py-4 text-center font-bold text-blue-600">15</td> </tr>
+                                <tr> <td class="px-6 py-4 font-bold text-slate-800">논리적 구성</td> <td class="px-6 py-4">단락 구성, 핵심 전달력(두괄식), 맞춤법</td> <td class="px-6 py-4 text-center font-bold text-blue-600">15</td> </tr>
+                                <tr> <td class="px-6 py-4 font-bold text-slate-800">조직 기여 가능성</td> <td class="px-6 py-4">입사 후 기여 방안, 현실적 성장 계획(3/5년)</td> <td class="px-6 py-4 text-center font-bold text-blue-600">10</td> </tr>
+                            </tbody>
+                            <tfoot class="bg-slate-900">
+                                <tr> <td class="px-6 py-4 font-bold text-right text-white" colspan="2">기본 항목 합계</td> <td class="px-6 py-4 text-center font-bold text-2xl text-white">100</td> </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                     <h4 class="mt-12 mb-4 font-bold text-slate-900" style="font-size: 24px; line-height: 32px;">가점 항목 (최대 10점)</h4>
+                     <div class="overflow-x-auto">
+                        <table class="not-prose min-w-full divide-y divide-slate-200 border border-slate-200 rounded-lg overflow-hidden">
+                            <thead class="bg-slate-900">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">가점 항목</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">내용</th>
+                                    <th scope="col" class="px-6 py-3 text-center text-xs font-bold text-white uppercase tracking-wider">배점</th>
+                                </tr>
+                            </thead>
+                             <tbody class="bg-white divide-y divide-slate-200 text-slate-700">
+                                 <tr><td class="px-6 py-4 font-bold text-slate-800">AI 특강 수강</td> <td class="px-6 py-4">ZOOM(2개), H-MOOC(3개) 이수 여부</td> <td class="px-6 py-4 text-center font-bold text-blue-600">최대 5</td></tr>
+                                 <tr><td class="px-6 py-4 font-bold text-slate-800">취업 상담</td> <td class="px-6 py-4">대학일자리본부 입사서류 컨설팅 완료 여부</td> <td class="px-6 py-4 text-center font-bold text-blue-600">4</td></tr>
+                                 <tr><td class="px-6 py-4 font-bold text-slate-800">사진 첨부</td> <td class="px-6 py-4">이력서 내 3x4cm 증명사진 첨부 여부</td> <td class="px-6 py-4 text-center font-bold text-blue-600">1</td></tr>
+                             </tbody>
+                             <tfoot class="bg-slate-900">
+                                 <tr><td class="px-6 py-4 font-bold text-right text-white" colspan="2">가점 합계</td> <td class="px-6 py-4 text-center font-bold text-2xl text-white">최대 10</td> </tr>
+                             </tfoot>
+                         </table>
+                     </div>
+                     <p class="text-right text-sm text-slate-500 mt-2" style="font-size: 18px; line-height: 30px;">※ 최종 점수 = 기본 점수 + 가산점</p>
+                </div>
+
+                <div class="tab-content" id="criteria-4">
+                    <h3 style="font-size: 36px; line-height: 44px;"><i class="fas fa-comments"></i> 2차 모의면접 심사 평가표 (100점)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="not-prose min-w-full divide-y divide-slate-200 border border-slate-200 rounded-lg overflow-hidden">
+                            <thead class="bg-slate-900">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">평가항목</th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">내용</th>
+                                    <th scope="col" class="px-6 py-3 text-center text-xs font-bold text-white uppercase tracking-wider">배점</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-slate-200 text-slate-700">
+                                <tr> <td class="px-6 py-4 font-bold text-slate-800">직무역량 & 전문성</td> <td class="px-6 py-4">직무 이해도, 실무 적용 가능성, 산업 트렌드 이해</td> <td class="px-6 py-4 text-center font-bold text-blue-600">30</td> </tr>
+                                <tr> <td class="px-6 py-4 font-bold text-slate-800">의사소통 & 논리적 사고</td> <td class="px-6 py-4">질문 의도 파악, 논리적 답변 구조, 근거 제시</td> <td class="px-6 py-4 text-center font-bold text-blue-600">30</td> </tr>
+                                <tr> <td class="px-6 py-4 font-bold text-slate-800">문제해결 & 상황 대응력</td> <td class="px-6 py-4">현장 질문 대응, 창의적 해결, 비판적 사고</td> <td class="px-6 py-4 text-center font-bold text-blue-600">20</td> </tr>
+                                <tr> <td class="px-6 py-4 font-bold text-slate-800">조직 적합성 & 협업 태도</td> <td class="px-6 py-4">조직 이해도, 팀워크, 갈등 해결 방식</td> <td class="px-6 py-4 text-center font-bold text-blue-600">10</td> </tr>
+                                <tr> <td class="px-6 py-4 font-bold text-slate-800">열정 & 성장 가능성</td> <td class="px-6 py-4">지원 동기 구체성, 학습 태도, 장기 비전</td> <td class="px-6 py-4 text-center font-bold text-blue-600">10</td> </tr>
+                            </tbody>
+                            <tfoot class="bg-slate-900">
+                                <tr> <td class="px-6 py-4 font-bold text-right text-white" colspan="2">합계</td> <td class="px-6 py-4 text-center font-bold text-2xl text-white">100</td> </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                     <div class="not-prose mt-12 p-6 bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-2xl">
+                         <h4 class="font-bold text-slate-900 text-xl mb-4" style="font-size: 24px; line-height: 32px;"><i class="fas fa-bullhorn text-blue-600"></i> 공통질문 사전공개</h4>
+                         <p class="text-slate-700 mt-0 mb-6" style="font-size: 18px; line-height: 30px;">2차 심사(모의면접)에서 진행하는 공통질문 2개를 사전 공개합니다.</p>
+                         <table class="min-w-full bg-white rounded-lg shadow">
+                             <thead class="bg-blue-600 text-white">
+                                 <tr>
+                                     <th class="px-4 py-3 text-center w-12">#</th>
+                                     <th class="px-4 py-3 text-left">공통질문 내용</th>
+                                 </tr>
+                             </thead>
+                             <tbody class="divide-y divide-slate-200 text-slate-700">
+                                 <tr class="hover:bg-slate-50">
+                                     <td class="px-4 py-3 text-center font-bold text-blue-600">1</td>
+                                     <td class="px-4 py-3">지원 직무 수행에 직접 연결된 경험 한 가지를 구조화(STAR 등)하여 설명하고, 그 경험에서 얻은 역량이 입사 후 업무에 어떻게 적용될지까지 구체적으로 말해보세요.</td>
+                                 </tr>
+                                 <tr class="hover:bg-slate-50">
+                                     <td class="px-4 py-3 text-center font-bold text-blue-600">2</td>
+                                     <td class="px-4 py-3">최근 6개월 내 해당 산업/직무 트렌드 1~2개를 근거(자료/사례)와 함께 설명하고, 그에 대응해 본인이 실행한(또는 실행 중인) 학습/프로젝트/포트폴리오 등 보강 계획을 제시해 주세요.</td>
+                                 </tr>
+                             </tbody>
+                         </table>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="guide" class="py-40 bg-slate-50">
+    <div class="container mx-auto px-8 max-w-7xl">
+        <div class="text-center mb-20">
+            <h2 data-aos="fade-up" class="text-5xl font-black text-slate-900 mb-4" style="line-height: 1.2;">참여 가이드</h2>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-600" style="line-height: 1.6;">
+                가산점 획득, AI 활용, 면접 준비까지! 합격 가능성을 높이는 모든 전략.
+            </p>
+        </div>
+
+        <div data-aos="fade-up" class="guide-tabs bg-white rounded-3xl shadow-xl p-6 md:p-12 text-slate-900">
+            <div class="flex flex-wrap gap-2 mb-8 border-b border-slate-200 pb-4">
+                <button class="tab-button active px-6 py-4 md:px-8 md:py-4 rounded-xl font-bold text-base md:text-lg transition-all border-2 shadow-lg" data-tab="guide-1">가산점 획득 (최대 10점)</button>
+                <button class="tab-button px-6 py-4 md:px-8 md:py-4 rounded-xl font-semibold text-slate-600 hover:text-slate-900 text-base md:text-lg transition-all border-2 border-slate-200 hover:border-blue-300" data-tab="guide-2">AI 활용 가이드</button>
+                <button class="tab-button px-6 py-4 md:px-8 md:py-4 rounded-xl font-semibold text-slate-600 hover:text-slate-900 text-base md:text-lg transition-all border-2 border-slate-200 hover:border-blue-300" data-tab="guide-3">AI 실전 프롬프트</button>
+                <button class="tab-button px-6 py-4 md:px-8 md:py-4 rounded-xl font-semibold text-slate-600 hover:text-slate-900 text-base md:text-lg transition-all border-2 border-slate-200 hover:border-blue-300" data-tab="guide-4">면접 준비 TIP</button>
+            </div>
+            
+            <div class="prose prose-lg max-w-none prose-slate prose-h3:text-slate-900 prose-h5:text-blue-600 prose-h6:text-slate-800 prose-ol:text-slate-600 prose-ul:text-slate-600 prose-p:text-slate-600 prose-strong:text-slate-700 prose-code:text-blue-600 prose-code:font-semibold prose-code:before:content-none prose-code:after:content-none prose-a:text-blue-600 hover:prose-a:text-blue-700">
+                <div class="tab-content active" id="guide-1">
+                    <h3 style="font-size: 36px; line-height: 44px;"><i class="fas fa-plus-circle text-blue-600"></i> 가산점 획득 전략 (최대 10점)</h3>
+                    <p style="font-size: 18px; line-height: 30px;">총 10점의 가산점은 당락을 결정할 수 있는 중요한 요소입니다. 아래 항목들을 확인하고 꼭 챙기세요!</p>
+                    
+                    <div class="grid lg:grid-cols-2 gap-10 not-prose">
+                        <div class="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-lg">
+                            <div class="flex items-start gap-6 mb-6">
+                                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chalkboard-teacher text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-2xl font-bold text-slate-900 mb-1">AI 활용 특강</h4>
+                                    <p class="text-3xl font-bold text-blue-600">최대 +5점</p>
+                                </div>
+                            </div>
+                            
+                            <h5 class="text-lg font-bold text-slate-800 mb-3">실시간 ZOOM 특강 (각 1점)</h5>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 p-4 bg-white rounded-lg">
+                                    <div class="text-slate-700">
+                                        <strong>ATS 이해 & 이력서 완성</strong><br>
+                                        <span class="text-sm">2025. 11. 03. (월) 18시</span>
+                                    </div>
+                                    <a href="https://buly.kr/G3E67RW" target="_blank" class="btn-premium relative z-10 bg-blue-600 text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-blue-700 transition-all mt-2 sm:mt-0 flex-shrink-0">
+                                        <span class="relative z-10"><i class="fas fa-link"></i> 신청</span>
+                                    </a>
+                                </li>
+                                <li class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 p-4 bg-white rounded-lg">
+                                    <div class="text-slate-700">
+                                        <strong>AI 역량검사 패턴 해독</strong><br>
+                                        <span class="text-sm">2025. 11. 05. (수) 18시</span>
+                                    </div>
+                                    <a href="https://buly.kr/6ihw8D3" target="_blank" class="btn-premium relative z-10 bg-blue-600 text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-blue-700 transition-all mt-2 sm:mt-0 flex-shrink-0">
+                                        <span class="relative z-10"><i class="fas fa-link"></i> 신청</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <h5 class="text-lg font-bold text-slate-800 mb-3">상시 H-MOOC 특강 (각 1점)</h5>
+                            <ul class="space-y-2 text-slate-600 list-disc list-inside mb-4">
+                                <li>기업분석 & 직무역량 파악</li>
+                                <li>경험정리 DB 만들기</li>
+                                <li>빠른 자소서 초안 작성</li>
+                            </ul>
+                            <a href="https://drive.google.com/file/d/1IX3osamzjRAjqYhjPBb3PNiTE4n1X_ko/view?usp=sharing" target="_blank" class="btn-premium inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-5 py-3 rounded-full font-semibold text-sm hover:shadow-lg transition-all no-underline">
+                                <span class="relative z-10"><i class="fas fa-info-circle"></i> H-MOOC 수강 방법</span>
+                            </a>
+                        </div>
+
+                        <div class="space-y-8">
+                            <div class="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-lg">
+                                <div class="flex items-start gap-6 mb-6">
+                                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-comments text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-2xl font-bold text-slate-900 mb-1">취업 컨설팅 상담</h4>
+                                        <p class="text-3xl font-bold text-blue-600">+4점</p>
+                                    </div>
+                                </div>
+                                <p class="text-slate-600 mb-4">대학일자리본부 전문 컨설턴트의 1:1 피드백으로 서류 완성도를 높이고 가산점도 받으세요.</p>
+                                
+                                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-md mb-4">
+                                    <p class="text-sm text-yellow-800 font-medium"><strong><i class="fas fa-exclamation-triangle"></i> 마감:</strong> 2025. 11. 13.(목)까지 <strong>상담 완료</strong> 필수!</p>
+                                    <p class="text-sm text-yellow-800 font-medium mt-1"><strong><i class="fas fa-lightbulb"></i> Tip:</strong> 지원자가 몰려 원하는 시간에 상담이 불가할 수 있음을 알려드립니다.</p>
+                                </div>
+
+                                <a href="https://drive.google.com/file/d/1fAoCBJzECO4vjdzTPTeNjEgAPrcw00Cf/view?usp=sharing" target="_blank" class="btn-premium inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-5 py-3 rounded-full font-semibold text-sm hover:shadow-lg transition-all no-underline">
+                                    <span class="relative z-10"><i class="fas fa-calendar-alt"></i> 상담 신청 방법</span>
+                                </a>
+                            </div>
+                            
+                            <div class="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-lg">
+                                <div class="flex items-start gap-6">
+                                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-camera text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-2xl font-bold text-slate-900 mb-1">증명사진 첨부</h4>
+                                        <p class="text-3xl font-bold text-blue-600">+1점</p>
+                                    </div>
+                                </div>
+                                <p class="text-slate-600 mt-4">이력서 양식에 3x4cm 규격 사진 첨부 시 인정됩니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="guide-2">
+                    <h3 style="font-size: 36px; line-height: 44px;"><i class="fas fa-robot text-blue-600"></i> AI 활용 가이드: Co-pilot처럼 사용하기</h3>
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-md my-6">
+                        <p class="text-yellow-800 !m-0" style="font-size: 18px; line-height: 30px;"><strong><i class="fas fa-exclamation-triangle"></i> 중요:</strong> AI는 '조수'이지 '대필 작가'가 아닙니다. AI 생성 내용을 그대로 제출 시, 독창성 부족으로 감점될 수 있습니다. <strong>반드시 본인의 경험과 생각으로 '인간미'를 더하세요.</strong> (AI 생성 의심도 30% 이하 목표)</p>
+                    </div>
+                    <h5 style="font-size: 24px; line-height: 32px;"><i class="fas fa-rocket"></i> 추천 워크플로우 (6단계)</h5>
+                    <ol style="font-size: 18px; line-height: 30px;">
+                        <li><strong>경험 정리(AI 특강):</strong> 모든 경험을 STAR+F/I 구조로 DB화.</li>
+                        <li><strong>기업/직무 분석(AI 특강):</strong> 지원처 핵심 키워드 파악.</li>
+                        <li><strong>초안 작성(H-MOOC AI):</strong> DB와 키워드 기반 초안 생성 (<a href="https://buly.kr/H6iYuzs" target="_blank" class="font-bold">바로가기</a>).</li>
+                        <li><strong>개인화 수정:</strong> '나'의 생각, 감정, 디테일 추가하여 AI 느낌 제거.</li>
+                        <li><strong>자동 평가(inface.ai):</strong> 직무 적합도, AI 의심도 점검 (<a href="https://inface.ai/hanbat" target="_blank" class="font-bold">바로가기</a>).</li>
+                        <li><strong>최종 제출:</strong> 피드백 반영 후 제출.</li>
+                    </ol>
+                </div>
+                
+                <div class="tab-content" id="guide-3">
+                    <h3 style="font-size: 36px; line-height: 44px;"><i class="fas fa-magic text-blue-600"></i> AI 실전 프롬프트 (H-MOOC AI 활용)</h3>
+                    <p style="font-size: 18px; line-height: 30px;">정확한 역할 부여와 평가 기준 제시로 AI 피드백 품질을 높여보세요.</p>
+                    <h5 style="font-size: 24px; line-height: 32px;">프롬프트 1: 경진대회 평가표 기반 피드백</h5>
+                     <pre class="code-block" id="prompt1"><button class="copy-btn" data-target="prompt1"><i class="fas fa-copy"></i> Copy</button><code>당신은 2025 NEXT PICK 경진대회 심사위원입니다.
+아래 【경진대회 평가표】를 기준으로, 제가 작성한 【자소서 답변】을 100점 만점으로 채점하고, 각 항목별 점수와 함께 점수를 높이기 위한 구체적인 개선안 3가지를 제시해주세요.
+【지원 정보】
+
+지원 직무: [예: 현대모비스/자율주행 시스템 설계]
+
+【자소서 문항 및 답변】
+
+문항: [자소서 문항 복사]
+답변: [내가 작성한 답변 붙여넣기]
+
+【경진대회 평가표 (100점 만점)】
+
+직무 이해도와 적합성 (30점): 직무기술서 키워드 포함, 역량 연계성
+경험의 구체성 (30점): STAR+F/I 기법, 정량적 성과(숫자≥3)
+차별화된 강점 (15점): 독창적 접근법, 실패-개선-성과 스토리
+논리적 구성 (15점): 단락별 주제 명확성(두괄식), 맞춤법
+조직 기여 가능성 (10점): 입사 후 구체적 기여 방안, 3~5년 목표
+
+【피드백 형식】
+종합 점수: []/100 점
+
+경진대회 합격 가능성: [대상 후보/본선 진출 유력/탈락 위험]
+
+항목별 점수 및 피드백
+1. 직무 이해도 ([]/30점)
+
+잘한 점:
+개선 필요:
+
+2. 경험의 구체성([]/30점)
+
+잘한 점:
+개선 필요:
+
+3. 차별화된 강점 ([]/15점)
+
+잘한 점:
+개선 필요:
+
+4. 논리적 구성 ([]/15점)
+
+잘한 점:
+개선 필요:
+
+5. 조직 기여 가능성 ([]/10점)
+
+잘한 점:
+개선 필요:
+
+최우선 개선 사항 3가지
+
+
+
+
+3.</code></pre>
+<h5 style="font-size: 24px; line-height: 32px;">프롬프트 2: 'AI 느낌' 제거 및 인간미 부여</h5>
+<pre class="code-block" id="prompt2"><button class="copy-btn" data-target="prompt2"><i class="fas fa-copy"></i> Copy</button><code>당신은 채용 전문가입니다.
+아래 자소서에서 "AI가 쓴 것 같은 느낌"을 제거하고, 더 인간적이고 진정성 있는 표현으로 수정해주세요. 수정 시 각 부분별로 [AI 느낌 원문] → [개선안] (수정 이유:) 형식으로 설명해주세요.
+【작성 내용】
+[수정하려는 자소서 내용 붙여넣기]
+【AI 느낌 체크리스트】
+
+과도하게 격식적이거나 딱딱한 표현
+진부한 클리셰 (예: "끊임없이 노력", "최선을 다해")
+구체성 없는 추상적 표현 (예: "많은", "다양한")
+개인의 목소리나 감정이 느껴지지 않는 부분
+AI 특유의 접속사 (예: "이에 따라", "나아가")</code></pre>
+</div>
+              <div class="tab-content" id="guide-4">
+                  <h3 style="font-size: 36px; line-height: 44px;"><i class="fas fa-microphone-alt text-blue-600"></i> 면접 준비 TIP: 당신을 NEXT PICK으로 만들 전략</h3>
+                  <p style="font-size: 18px; line-height: 30px;">사전 공개된 공통 질문 2가지에 대한 답변을 미리 준비하여 면접관을 사로잡으세요.</p>
+
+                  <h5 style="font-size: 24px; line-height: 32px;"><i class="fas fa-history"></i> 경험 구조화 (공통 질문 1 대비)</h5>
+                  <h6 style="font-size: 18px; line-height: 30px;"><i class="fas fa-lightbulb"></i> 우승 전략 3가지</h6>
+                  <div class="space-y-4">
+                      <div class="bg-white border border-slate-200 rounded-xl p-6">
+                          <h6 class="!mt-0 !mb-2 !text-blue-600">전략 1: 실패 → 극복 스토리</h6>
+                          <code class="block w-full">"3개월간 팔로워 50명에서 안 늘었습니다. 완전 망하고 있었죠.<br>팔로워 50명 전원한테 DM 보냈더니 '선배 취업 후기'를 원하더라고요.<br>콘텐츠 방향 바꿔서 3개월 후 2,300명 됐습니다."</code>
+                          <p class="!mt-3 !mb-0 text-sm">→ 같은 경험, 완전히 다른 임팩트</p>
+                      </div>
+                      <div class="bg-white border border-slate-200 rounded-xl p-6">
+                          <h6 class="!mt-0 !mb-2 !text-blue-600">전략 2: 역발상</h6>
+                          <code class="block w-full">"공모전 3번 떨어진 얘기 하겠습니다.<br>수상작 30개 분석했더니 '아이디어'보다 '실행력+숫자'가 중요하더라고요.<br>4번째도 떨어졌지만, 이 과정에서 배운 게 제 강점이 됐습니다."</code>
+                          <p class="!mt-3 !mb-0 text-sm">→ 실패가 오히려 강렬함</p>
+                      </div>
+                       <div class="bg-white border border-slate-200 rounded-xl p-6">
+                          <h6 class="!mt-0 !mb-2 !text-blue-600">전략 3: 돈 쓴 경험 (최강)</h6>
+                          <code class="block w-full">"제 돈 30만원 써서 광고 돌려봤습니다.<br>메타 15만원: 클릭당 350원, 전환율 1.2% / 구글 15만원: 클릭당 890원, 전환율 0.4%<br>근데 구글 유저가 체류시간 3배 길었어요. '싼 게 아니라 타겟이 맞아야 한다' 깨달았습니다."</code>
+                          <p class="!mt-3 !mb-0 text-sm">→ 돈 쓴 사람 vs 안 쓴 사람 = 비교 불가</p>
+                      </div>
+                  </div>
+
+                  <h6 class="!mt-8" style="font-size: 18px; line-height: 30px;"><i class="fas fa-comments"></i> 답변 구조 (2분 30초)</h6>
+                   <pre class="code-block" id="interview_q1_structure"><button class="copy-btn" data-target="interview_q1_structure"><i class="fas fa-copy"></i> Copy</button><code>[0~10초] 훅: "제 돈 30만원 날린 얘기 해도 될까요?"
+
+
+[1030초] 문제 상황: "작년 11월, ○○ 프로젝트에서 예산 30만원, 기간 2주, 팀원 경험 전무"
+[3060초] 시도 1 → 실패: "처음엔 ○○ 방법 시도했는데 완전 망했어요. 전환율 0.1%밖에 안 나왔거든요."
+[60100초] 시도 2 → 성공: "방향 바꿔서 세 가지 했습니다. 첫째, [액션+숫자] 둘째, [액션+숫자] 셋째, [액션+숫자]"
+[100120초] 결과 + 인사이트: "결과: [숫자] 달성 / 발견: [본인만의 인사이트]"
+[120140초] 현재진행형 + 직무 연결: "지금은 [진행 중 프로젝트] 하고 있고, 입사 후 [구체적 기여 방식]"
+[140150초] 펀치라인: "실패하면서 배운 게 더 많았고, 그게 제 가장 큰 자산입니다."</code></pre>
+                    <h5 class="!mt-12" style="font-size: 24px; line-height: 32px;"><i class="fas fa-chart-bar"></i> 트렌드 분석 (공통 질문 2 대비)</h5>
+                    <h6 style="font-size: 18px; line-height: 30px;"><i class="fas fa-lightbulb"></i> 우승 전략 3가지</h6>
+                     <div class="space-y-4">
+                        <div class="bg-white border border-slate-200 rounded-xl p-6">
+                            <h6 class="!mt-0 !mb-2 !text-blue-600">전략 1: 역트렌드</h6>
+                            <code class="block w-full">"AI 자동화가 대세라는데, 오히려 '인간 터치' 마케팅이 부상하고 있습니다.<br>틱톡 '#unfiltered' 해시태그가 전년 대비 340% 증가. 날것 영상이 평균 조회수 2.3배 높습니다.<br>제가 3개월간 테스트한 결과..."</code>
+                            <p class="!mt-3 !mb-0 text-sm">→ 남들이 "AI"라고 할 때 "반AI"</p>
+                        </div>
+                        <div class="bg-white border border-slate-200 rounded-xl p-6">
+                            <h6 class="!mt-0 !mb-2 !text-blue-600">전략 2: 초구체적</h6>
+                            <code class="block w-full">"숏폼 커머스가 아니라, '네이버 클립 vs 틱톡 구매 패턴 차이'입니다.<br>네이버: 68% 검색 후 구매 / 틱톡: 92% 추천 피드 구매 (출처: 오픈서베이 2024.2월)<br>두 플랫폼에 같은 영상 올려서 테스트했습니다..."</code>
+                            <p class="!mt-3 !mb-0 text-sm">→ "숏폼" 말고 "네이버 vs 틱톡 차이"</p>
+                        </div>
+                        <div class="bg-white border border-slate-200 rounded-xl p-6">
+                            <h6 class="!mt-0 !mb-2 !text-blue-600">전략 3: 실패 트렌드</h6>
+                            <code class="block w-full">"OTT 시장 성장한다는데, 실은 '구독 피로도'가 심각합니다.<br>평균 구독 개수 2.8개→2.1개 감소 / 2030 41% 매달 취소/재가입 반복 (출처: DMC미디어 2024.3월)<br>구독 취소자 50명 인터뷰했습니다..."</code>
+                            <p class="!mt-3 !mb-0 text-sm">→ "성장" 말고 "문제점"을 트렌드로</p>
+                        </div>
+                    </div>
+
+                    <h6 class="!mt-8" style="font-size: 18px; line-height: 30px;"><i class="fas fa-signal"></i> 근거 레벨 (높을수록 신뢰도 UP)</h6>
+                    <ol class="!list-none !pl-0 space-y-2" style="font-size: 18px; line-height: 30px;">
+                        <li><span class="font-bold text-blue-600 mr-2">레벨 1 (50점):</span> "뉴스에 따르면..."</li>
+                        <li><span class="font-bold text-blue-600 mr-2">레벨 2 (70점):</span> "오픈서베이 2024.2월 리포트, [숫자]"</li>
+                        <li><span class="font-bold text-blue-600 mr-2">레벨 3 (85점):</span> "제가 직접 50명 설문조사"</li>
+                        <li><span class="font-bold text-blue-600 mr-2">레벨 4 (95점):</span> "제 돈 30만원 써서 광고 테스트"</li>
+                        <li><span class="font-bold text-blue-600 mr-2">레벨 5 (100점):</span> "현직자 3명 인터뷰"</li>
+                    </ol>
+
+                    <h6 class="!mt-8" style="font-size: 18px; line-height: 30px;"><i class="fas fa-comments"></i> 답변 구조 (2분 30초)</h6>
+                    <pre class="code-block" id="interview_q2_structure"><button class="copy-btn" data-target="interview_q2_structure"><i class="fas fa-copy"></i> Copy</button><code>[0~15초] 훅: "AI가 대세라는데, 정말 그럴까요?"
+[1545초] 트렌드 제시: "[구체적 트렌드]가 [시기]부터 [변화] / 근거 1: [출처+숫자] / 근거 2: [기업 사례] / 근거 3: [비교 데이터]"
+[4575초] 검증: "직접 [방법]으로 테스트했습니다. / 결과 1: [숫자] / 결과 2: [숫자] / 발견: [예상과 달랐던 점]"
+[75110초] 실행 내역: "1단계 완료: ✓ [활동+증거] / 2단계 진행 중: → [프로젝트명] / 3단계 향후 2주: → [날짜]까지 [목표]"
+[110130초] 직무 연결: "[회사 현황]에 제 [경험] 적용 가능 / [회사 뉴스] 봤을 때 제 [프로젝트]가 필요한 시점"
+[130~150초] 펀치라인: "트렌드를 아는 것과 해보는 건 다르더라고요. 저는 이미 해보고 있습니다."</code></pre>
+                    <h5 class="!mt-12" style="font-size: 24px; line-height: 32px;"><i class="fas fa-search"></i> 산업/직무 트렌드 조사 사이트</h5>
+                    <ul class="!list-none !pl-0 space-y-3" style="font-size: 18px; line-height: 30px;">
+                        <li><strong>KIND (기업 IR 자료):</strong> <a href="https://kind.krx.co.kr/corpgeneral/irschedule.do?method=searchIRScheduleMain&gubun=iRMaterials" target="_blank" class="font-bold break-all">https://kind.krx.co.kr/...</a></li>
+                        <li><strong>네이버증권 (전자공시, 산업분석리포트):</strong> <a href="https://finance.naver.com/" target="_blank" class="font-bold break-all">https://finance.naver.com/</a></li>
+                        <li><strong>캐치 (기업분석리포트 - 회원가입 필요):</strong> <a href="https://www.catch.co.kr/Comp/AnalysisComp" target="_blank" class="font-bold break-all">https://www.catch.co.kr/...</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="py-40 bg-white text-slate-900">
+    <div class="container mx-auto px-6 max-w-4xl">
+        <div class="text-center mb-20">
+            <h2 data-aos="fade-up" class="text-5xl font-black text-slate-900 mb-4" style="line-height: 1.2;">자주 묻는 질문 (FAQ)</h2>
+        </div>
+        
+        <div class="space-y-6">
+            <details data-aos="fade-up" class="faq-item card-hover bg-slate-50 rounded-3xl p-8 border border-slate-200 open:shadow-xl">
+                <summary class="text-xl font-bold text-slate-900" style="font-size: 24px; line-height: 32px;">Q. AI를 활용해서 자소서를 쓰면 탈락하나요?</summary>
+                <div class="prose prose-lg max-w-none text-slate-600 mt-4 pt-4 border-t border-slate-200">
+                    <p style="font-size: 18px; line-height: 30px;"><strong>A: AI는 도구입니다.</strong> 초안 작성, 교정 등에는 활용하되, 반드시 본인의 경험과 생각으로 '인간미'를 더해야 합니다. 대학일자리본부 AI진단 콘텐츠로 "맞춤법, AI 생성 의심도"를 점검하세요.</p>
+                    <p style="font-size: 18px; line-height: 30px; margin-top: 12px;">📌 <strong>대학일자리본부 홈페이지 > AI진단</strong><br>
+                    <a href="https://zrr.kr/Qw0GHb" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold underline">https://zrr.kr/Qw0GHb</a></p>
+                </div>
+            </details>
+            <details data-aos="fade-up" class="faq-item card-hover bg-slate-50 rounded-3xl p-8 border border-slate-200 open:shadow-xl">
+                <summary class="text-xl font-bold text-slate-900" style="font-size: 24px; line-height: 32px;">Q. 경험이 별로 없는데 어떻게 쓰나요?</summary>
+                <div class="prose prose-lg max-w-none text-slate-600 mt-4 pt-4 border-t border-slate-200">
+                    <p style="font-size: 18px; line-height: 30px;"><strong>A: 양보다 질입니다.</strong> 단 하나의 경험이라도 STAR+F/I 기법으로 깊이 있게 서술하고 직무 연관성을 연결하면 충분합니다. 수업 프로젝트, 동아리, 자격증 준비 과정도 좋습니다.</p>
+                </div>
+            </details>
+            <details data-aos="fade-up" class="faq-item card-hover bg-slate-50 rounded-3xl p-8 border border-slate-200 open:shadow-xl">
+                <summary class="text-xl font-bold text-slate-900" style="font-size: 24px; line-height: 32px;">Q. 이력서와 자소서 중 뭐가 더 중요한가요?</summary>
+                <div class="prose prose-lg max-w-none text-slate-600 mt-4 pt-4 border-t border-slate-200">
+                    <p style="font-size: 18px; line-height: 30px;"><strong>A: 이력서 완성도가 우선입니다.</strong> 이력서(적격 심사)를 통과해야 자소서(본 평가 100점)가 평가됩니다. 둘 다 중요하지만, 기본 요건(이력서)을 먼저 완벽히 갖춰야 합니다.</p>
+                </div>
+            </details>
+            <details data-aos="fade-up" class="faq-item card-hover bg-slate-50 rounded-3xl p-8 border border-slate-200 open:shadow-xl">
+                <summary class="text-xl font-bold text-slate-900" style="font-size: 24px; line-height: 32px;">Q. 본선 진출(15명)하면 무조건 상을 받나요?</summary>
+                <div class="prose prose-lg max-w-none text-slate-600 mt-4 pt-4 border-t border-slate-200">
+                    <p style="font-size: 18px; line-height: 30px;"><strong>A: 66% 확률로 수상합니다.</strong> 본선 진출 15명 중 10명이 시상 대상(대상~입선)입니다. 모의면접만 성실히 임하면 좋은 결과를 얻을 수 있습니다.</p>
+                </div>
+            </details>
+            <details data-aos="fade-up" class="faq-item card-hover bg-slate-50 rounded-3xl p-8 border border-slate-200 open:shadow-xl">
+                <summary class="text-xl font-bold text-slate-900" style="font-size: 24px; line-height: 32px;">Q. AI 특강 가산점을 놓쳤는데 어떻게 하죠?</summary>
+                <div class="prose prose-lg max-w-none text-slate-600 mt-4 pt-4 border-t border-slate-200">
+                    <p style="font-size: 18px; line-height: 30px;"><strong>A: H-MOOC 특강(3종)은 상시 수강 가능합니다!</strong> 지금 바로 수강하세요. ZOOM 특강을 놓쳤다면 다른 가점(컨설팅 4점, 증명사진 1점)을 꼭 챙기세요.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<section id="submit" class="py-40 bg-slate-900">
+    <div class="container mx-auto px-8 max-w-7xl">
+        <div class="text-center mb-16">
+            <h2 data-aos="fade-up" class="text-5xl font-black text-white mb-4" style="line-height: 1.2;">경진대회 양식 & 출품하기</h2>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-2xl text-cyan-400 font-semibold">
+                접수 마감: 2025. 11. 14.(금) 23:59
+            </p>
+        </div>
+        
+        <div data-aos="zoom-in" class="text-center mb-16">
+            <a href="https://forms.gle/bpywPV7KdfzsFuG18" target="_blank" class="btn-premium inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-10 py-5 rounded-full font-bold text-xl hover:shadow-2xl hover:shadow-blue-500/30 transition-all">
+                <span class="relative z-10">지금 바로 출품하기 (구글 폼)</span>
+                <i class="fas fa-paper-plane text-xl"></i>
+            </a>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10 mb-8">
+            <div data-aos="fade-right" class="glass rounded-3xl p-8 border border-white/10">
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <i class="fas fa-file-download text-cyan-400"></i>
+                    필수 제출 양식
+                </h3>
+                <div class="space-y-4">
+                    <a href="https://drive.google.com/file/d/1lSMOpMP0g0w_6-ePK5zJoEgCtrUmLe5e/view?usp=sharing" target="_blank" class="flex items-center justify-between p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                                <i class="fas fa-file-alt text-blue-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">【붙임1】 참가신청서</p>
+                                <p class="text-sm text-gray-400">HWP 형식 • 필수 작성</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-download text-gray-400 group-hover:text-white transition-colors"></i>
+                    </a>
+                    
+                    <a href="https://drive.google.com/file/d/13lu18MQ20ZnqnRAf_URfXSiHFwIGnkCM/view?usp=sharing" target="_blank" class="flex items-center justify-between p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center">
+                                <i class="fas fa-file-alt text-cyan-400"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">【붙임2】 이력서 및 자기소개서</p>
+                                <p class="text-sm text-gray-400">HWP 형식 • 필수 작성</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-download text-gray-400 group-hover:text-white transition-colors"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div data-aos="fade-left" class="glass rounded-3xl p-8 border border-white/10">
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <i class="fas fa-question-circle text-cyan-400"></i>
+                    한글 프로그램이 없다구요?
+                </h3>
+                <p class="text-gray-300 mb-4" style="font-size: 18px; line-height: 30px;">아래 방법을 따라 네이버 MYBOX에서 HWP 파일을 편집할 수 있습니다.</p>
+                <ol class="list-decimal list-inside space-y-2 text-gray-400" style="font-size: 18px; line-height: 30px;">
+                    <li>네이버 MYBOX (<a href="https://mybox.naver.com/" target="_blank" class="text-cyan-400 hover:underline font-semibold">https://mybox.naver.com/</a>) 접속</li>
+                    <li>다운로드한 HWP 양식 파일을 드래그하여 업로드</li>
+                    <li>업로드된 파일을 열고 상단의 '웹 버전으로 편집' 클릭</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div data-aos="fade-up" class="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/20 rounded-3xl p-8">
+            <h4 class="text-2xl font-bold text-white mb-6"><i class="fas fa-exclamation-triangle text-yellow-400"></i> 출품 전 최종 체크! (자동 탈락 방지)</h4>
+            
+            <div class="divide-y divide-white/10">
+                <div class="flex flex-col md:flex-row gap-2 py-4">
+                    <div class="w-full md:w-1/3 font-semibold text-gray-400">파일 형식</div>
+                    <div class="w-full md:w-2/3 text-white font-bold text-yellow-400">HWP 또는 HWPX만 가능 (PDF, Word X)</div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-2 py-4">
+                    <div class="w-full md:w-1/3 font-semibold text-gray-400">파일명 (필수!)</div>
+                    <div class="w-full md:w-2/3 text-white font-bold text-yellow-400 break-all">
+                        [붙임1] 참가신청서_학과_학번_이름.hwp<br>
+                        [붙임2] 이력서 및 자기소개서_학과_학번_이름.hwp
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-2 py-4">
+                    <div class="w-full md:w-1/3 font-semibold text-gray-400">양식 준수</div>
+                    <div class="w-full md:w-2/3 text-white font-bold">지정 글꼴/크기 <span class="text-red-400">변경 절대 금지</span></div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-2 py-4">
+                    <div class="w-full md:w-1/3 font-semibold text-gray-400">필수 기재</div>
+                    <div class="w-full md:w-2/3 text-white font-bold">이력서/자소서 상단 지원 기업/직무명 명확히 기재</div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-2 py-4">
+                    <div class="w-full md:w-1/3 font-semibold text-gray-400">가산점(+1점)</div>
+                    <div class="w-full md:w-2/3 text-white font-bold">이력서 양식 내 3x4cm 증명사진 첨부</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<footer class="py-12 bg-slate-950 border-t border-white/10">
+    <div class="container mx-auto px-6 text-center">
+        <p class="text-gray-500 mb-2">본 콘텐츠의 저작권은 Ahn jeong hyeon에 있으며, 허가 없는 복제·배포를 금합니다.</p>
+        <p class="text-gray-600">Copyright © Career consultant Ahn jeong hyeon. All rights reserved. | 국립한밭대학교 대학일자리본부</p>
+    </div>
+</footer>
+
+<script>
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+    });
+    
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".hero h1", { y: 30, opacity: 0, duration: 0.8, delay: 0.3 });
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const headerOffset = document.querySelector('header').offsetHeight;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    function initializeTabs(containerSelector) {
+        const tabContainer = document.querySelector(containerSelector);
+        if (!tabContainer) return;
+        
+        const tabButtons = tabContainer.querySelectorAll('.tab-button');
+        const tabContents = tabContainer.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetTabId = button.getAttribute('data-tab');
+                const targetContent = document.getElementById(targetTabId);
+                
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                button.classList.add('active');
+
+                tabContents.forEach(content => content.classList.remove('active'));
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+    }
+    
+    function updateCountdown() {
+        const countdownElement = document.getElementById('realtime-countdown');
+        if (!countdownElement) return;
+        
+        const deadline = new Date('2025-11-14T23:59:59+09:00').getTime();
+        const now = new Date().getTime();
+        const distance = deadline - now;
+        
+        if (distance > 0) {
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            countdownElement.innerHTML = `${days}일 ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        } else {
+            countdownElement.innerHTML = '접수 마감';
+            countdownElement.classList.add('text-red-400');
+        }
+    }
+
+    function initializeCopyButtons() {
+        document.querySelectorAll('.copy-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const codeElement = targetElement.querySelector('code');
+                    let textToCopy = '';
+
+                    if (codeElement) {
+                        let clone = codeElement.cloneNode(true);
+                        textToCopy = clone.innerText || clone.textContent;
+                    } else {
+                        let clone = targetElement.cloneNode(true);
+                        let btnClone = clone.querySelector('.copy-btn');
+                        if(btnClone) clone.removeChild(btnClone);
+                        textToCopy = clone.innerText || clone.textContent;
+                    }
+
+                    navigator.clipboard.writeText(textToCopy.trim()).then(() => {
+                        button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                        button.classList.add('copied');
+                        setTimeout(() => {
+                            button.innerHTML = '<i class="fas fa-copy"></i> Copy';
+                            button.classList.remove('copied');
+                        }, 1500);
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                        button.innerHTML = '<i class="fas fa-times"></i> Error';
+                        setTimeout(() => {
+                            button.innerHTML = '<i class="fas fa-copy"></i> Copy';
+                        }, 1500);
+                    });
+                }
+            });
+        });
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeTabs('.criteria-tabs');
+        initializeTabs('.guide-tabs');
+        initializeCopyButtons();
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    });
+</script>
+</body>
+</html>
